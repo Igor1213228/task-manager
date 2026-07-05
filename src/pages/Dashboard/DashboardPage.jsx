@@ -2,9 +2,10 @@ import { useState } from "react"
 import { useTasks } from "../../entities/task/model/useTasks"
 import TaskCard from "../../entities/task/ui/TaskCard"
 import AddTaskForm from "../../features/task-create/AddTaskForm"
+import Toast from "../../shared/ui/Toast"
 import { useTaskFilter } from "../../features/task-filter/useTaskFilter"
 import TaskFilterBar from "../../features/task-filter/TaskFilterBar"
-import Toast from "../../shared/ui/Toast"
+
 
 function DashboardPage() {
   const { tasks, isLoading, error, setTasks } = useTasks()
@@ -36,6 +37,7 @@ function DashboardPage() {
   }
 
   if (isLoading) {
+
     return <p>Загрузка задач...</p>
   }
 
