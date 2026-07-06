@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = "http://localhost:3001/tasks"
+const BASE_URL = "https://task-manager-2gfe.onrender.com/tasks"
 
 export async function fetchTasks() {
   const response = await axios.get(BASE_URL)
